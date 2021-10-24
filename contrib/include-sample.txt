@@ -1,0 +1,3 @@
+#/home/<your_user>/.config
+#/home/<your_user>/Documents
+/home/<your_user>

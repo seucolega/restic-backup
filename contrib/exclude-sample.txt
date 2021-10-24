@@ -1,0 +1,99 @@
+##
+# https://forum.restic.net/t/useful-exclude-patterns/828
+# du -hc -d2 /home/<your_user>/workspace --exclude-from=/home/<your_user>/Documents/restic/exclude.txt | sort -rh
+
+# If there's any folder called .cache it's a cache
+# my development folders have too many copies of this
+#/home/<your_user>/**/.git
+/home/<your_user>/**/tmp
+/home/<your_user>/**/cache
+/home/<your_user>/**/.cache
+/home/<your_user>/**/Cache
+/home/<your_user>/**/.local
+/home/<your_user>/**/log
+/home/<your_user>/**/logs
+/home/<your_user>/**/node_modules
+/home/<your_user>/**/bower_components
+#/home/<your_user>/**/vendor
+/home/<your_user>/**/site-packages
+/home/<your_user>/**/venv
+/home/<your_user>/**/env
+/home/<your_user>/**/.venv
+/home/<your_user>/**/__pycache__
+#/home/<your_user>/**/wp-admin
+#/home/<your_user>/**/wp-includes
+/home/<your_user>/**/devilbox
+/home/<your_user>/workspace/**/.metadata
+/home/<your_user>/workspace/**/build
+/home/<your_user>/workspace/**/dist
+/home/<your_user>/workspace/**/.next/static
+/home/<your_user>/workspace/**/staticfiles
+/home/<your_user>/workspace/**/cache.sqlite
+/home/<your_user>/workspace/**/wp-content/uploads
+/home/<your_user>/workspace/**/wp-content/themes/twenty
+/home/<your_user>/workspace/**/wp-content/plugins/akismet
+/home/<your_user>/public_html/**/wp-content/uploads
+/home/<your_user>/public_html/**/wp-content/themes/twenty
+/home/<your_user>/public_html/**/wp-content/plugins/akismet
+
+# WebDAV mounts
+/home/<your_user>/.davfs2/cache
+
+# Trash
+/home/<your_user>/.local/share/Trash
+
+# Cache of IMAP messages
+/home/<your_user>/.thunderbird/**/ImapMail
+
+# I never keep important stuff there
+/home/<your_user>/Downloads
+
+# should be empty, but - eh
+/home/<your_user>/mnt
+
+# where I restore stuff
+/home/<your_user>/restore
+
+# firefox profiles, standard and snap install
+/home/<your_user>/.mozilla/firefox/**/storage
+/home/<your_user>/.mozilla/firefox/**/minidumps
+/home/<your_user>/snap/firefox/common/.mozilla/firefox/**/storage
+/home/<your_user>/snap/firefox/common/.mozilla/firefox/**/minidumps
+
+# Google Chrome and Chromium
+/home/<your_user>/.config/chromium/Default/Local Storage
+/home/<your_user>/.config/chromium/Default/Session Storage
+/home/<your_user>/.config/chromium/Default/Application Cache
+/home/<your_user>/.config/chromium/PepperFlash
+/home/<your_user>/snap/chromium/**/.config/chromium/Default/Local Storage
+/home/<your_user>/snap/chromium/**/.config/chromium/Default/Session Storage
+/home/<your_user>/snap/chromium/**/.config/chromium/Default/Application Cache
+
+/home/<your_user>/.config/**/CacheStorage
+/home/<your_user>/.config/**/CachedData
+/home/<your_user>/.config/**/Code Cache
+/home/<your_user>/.config/**/IndexedDB
+/home/<your_user>/.config/**/Local Storage
+/home/<your_user>/.config/**/Session Storage
+/home/<your_user>/.config/**/Application Cache
+/home/<your_user>/.config/**/PepperFlash
+/home/<your_user>/.config/**/blob_storage
+
+# Electron apps seem to do this
+/home/<your_user>/.config/**/Cache
+/home/<your_user>/.config/**/GPUCache
+/home/<your_user>/.config/**/ShaderCache
+/home/<your_user>/snap/**/.config/**/Cache
+/home/<your_user>/snap/**/.config/**/GPUCache
+/home/<your_user>/snap/**/.config/**/ShaderCache
+
+# Microsoft VS Code follows different standards
+/home/<your_user>/.config/Code/CachedData
+/home/<your_user>/.config/Code/CachedExtensions
+/home/<your_user>/.config/Code/logs
+/home/<your_user>/.config/Code - OSS/CachedData
+/home/<your_user>/.config/Code - OSS/CachedExtensions
+/home/<your_user>/.config/Code - OSS/logs
+
+# I only use Wine to run the odd executable, so I exclude it all
+/home/<your_user>/.wine

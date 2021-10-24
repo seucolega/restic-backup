@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer to restic backup service
+
+[Timer]
+Persistent=true
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
