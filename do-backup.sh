@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Run a restic backup command using the correct repo and environment values
-set -e -o pipefail
-
-source $RESTIC_BACKUP_DIRECTORY/env.sh
+set -a
+source $HOME/.config/restic-backup/restic-backup.conf
+set +a
 
 echo "Running command using the repository $RESTIC_REPOSITORY"
 

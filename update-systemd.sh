@@ -7,9 +7,9 @@ then
     mkdir -p $SYSTEMD_USER_DIR
 fi
 
-cp -r systemd/* $SYSTEMD_USER_DIR
+cp -r $HOME/.config/restic-backup/systemd/* $SYSTEMD_USER_DIR
 
 systemctl --user daemon-reload
 
 echo "Then, you can activate the timer with the command below:"
-echo "systemctl --user enable restic-backup.timer"
+echo "systemctl --user enable restic-backup.timer restic-prune.timer"
